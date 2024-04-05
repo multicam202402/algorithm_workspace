@@ -4,18 +4,21 @@
     let arr = createArray(1, 16, 10);
     console.log("정렬 전 ", arr);
 
-    function bubbleSort(n){
-        if(n>=arr.length)return;
-        for(let i=0 ; i<arr.length-n;i++){
-            if(arr[i] >  arr[i+1]){
-                let temp = arr[i]; 
-                arr[i] = arr[i+1];
-                arr[i+1] = temp;
+    function bubbleSort(n) {
+        if (n >= arr.length) return;
+        for (let i = 0; i < arr.length - n; i++) {
+            if (arr[i] > arr[i + 1]) {
+                let temp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = temp;
             }
         }
-        bubbleSort(n+1);
+        bubbleSort(n + 1);
     }
     bubbleSort(0);
     console.log("정렬 후 ", arr);
 
 </script>
+
+
+
