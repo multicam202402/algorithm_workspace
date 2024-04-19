@@ -19,18 +19,21 @@
         }
     }
     */
-  
-    function selectionSort(n){
-        if(n >=arr.length)return;
-        for(let i=n; i<arr.length;i++){
-            if( arr[i] < arr[n] ){ //선택된 자리값보다 다른 요소들이 더 작다면 스왑
-                let temp = arr[n]; 
-                arr[n] = arr[i]; 
+
+    function selectionSort(n) {
+        if (n >= arr.length) return;
+        for (let i = n; i < arr.length; i++) {
+            if (arr[i] < arr[n]) { //선택된 자리값보다 다른 요소들이 더 작다면 스왑
+                let temp = arr[n];
+                arr[n] = arr[i];
                 arr[i] = temp;
             }
         }
-        selectionSort(n+1);
-    }    
+        selectionSort(n + 1);
+    }
     selectionSort(0);
     console.log("정렬 후 ", arr);
 </script>
+
+
+
